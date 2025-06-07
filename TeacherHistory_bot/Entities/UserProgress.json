@@ -1,0 +1,40 @@
+{
+  "name": "UserProgress",
+  "type": "object",
+  "properties": {
+    "topic_id": {
+      "type": "string",
+      "description": "ID темы"
+    },
+    "assignment_id": {
+      "type": "string",
+      "description": "ID задания"
+    },
+    "user_answer": {
+      "type": "string",
+      "description": "Ответ пользователя"
+    },
+    "is_correct": {
+      "type": "boolean",
+      "description": "Правильность ответа"
+    },
+    "points_earned": {
+      "type": "integer",
+      "description": "Заработанные баллы"
+    },
+    "ai_feedback": {
+      "type": "string",
+      "description": "Обратная связь от ИИ"
+    },
+    "attempt_number": {
+      "type": "integer",
+      "default": 1,
+      "description": "Номер попытки"
+    }
+  },
+  "required": [
+    "topic_id",
+    "assignment_id",
+    "user_answer"
+  ]
+}

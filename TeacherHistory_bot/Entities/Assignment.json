@@ -1,0 +1,72 @@
+{
+  "name": "Assignment",
+  "type": "object",
+  "properties": {
+    "topic_id": {
+      "type": "string",
+      "description": "ID связанной темы"
+    },
+    "title": {
+      "type": "string",
+      "description": "Название задания"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "test",
+        "essay",
+        "document_analysis",
+        "case_study"
+      ],
+      "description": "Тип задания"
+    },
+    "exam_format": {
+      "type": "string",
+      "enum": [
+        "ege",
+        "oge",
+        "regular"
+      ],
+      "description": "Формат экзамена"
+    },
+    "question": {
+      "type": "string",
+      "description": "Текст задания"
+    },
+    "options": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Варианты ответов для тестов"
+    },
+    "correct_answer": {
+      "type": "string",
+      "description": "Правильный ответ"
+    },
+    "points": {
+      "type": "integer",
+      "default": 5,
+      "description": "Баллы за задание"
+    },
+    "explanation": {
+      "type": "string",
+      "description": "Объяснение правильного ответа"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "default": "medium"
+    }
+  },
+  "required": [
+    "topic_id",
+    "title",
+    "type",
+    "question"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Topic",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Название темы"
+    },
+    "grade": {
+      "type": "integer",
+      "enum": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "description": "Класс"
+    },
+    "subject": {
+      "type": "string",
+      "enum": [
+        "history",
+        "social_studies"
+      ],
+      "description": "Предмет"
+    },
+    "content": {
+      "type": "string",
+      "description": "Содержание урока"
+    },
+    "order_index": {
+      "type": "integer",
+      "description": "Порядок в программе"
+    },
+    "points_reward": {
+      "type": "integer",
+      "default": 10,
+      "description": "Баллы за изучение темы"
+    },
+    "video_url": {
+      "type": "string",
+      "description": "Ссылка на видеоурок"
+    },
+    "is_premium": {
+      "type": "boolean",
+      "default": false,
+      "description": "Является ли контент платным"
+    }
+  },
+  "required": [
+    "title",
+    "grade",
+    "subject",
+    "content"
+  ]
+}
